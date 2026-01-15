@@ -1,0 +1,14 @@
+dataset:
+  name: retina
+  num_classes: 2
+  ignore_index: 255
+  img_size: [512, 512]
+  crop_size: [512, 512]
+  hf_id: "REPLACE_WITH_HF_DATASET_ID"
+  # Example: a retina dataset on HF, set your ID here.
+  hf_image_key: image
+  hf_mask_key: mask
+  hf_splits:
+    train: train
+    val: validation
+    test: test
