@@ -1,0 +1,12 @@
+exp:
+  name: main_full_method
+
+uda:
+  enabled: true
+  use_diffusion_aug: true
+  use_topo_loss: true
+  use_pseudo_filter: true
+  use_adv: true
+  topo_weight: 0.1
+  adv_weight: 0.001
+  consistency_weight: 0.1
