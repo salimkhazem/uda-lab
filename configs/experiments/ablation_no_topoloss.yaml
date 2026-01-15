@@ -1,0 +1,6 @@
+exp:
+  name: ablation_no_topoloss
+
+uda:
+  enabled: true
+  use_topo_loss: false
