@@ -1,0 +1,13 @@
+dataset:
+  name: kvasir
+  num_classes: 2
+  ignore_index: 255
+  img_size: [512, 512]
+  crop_size: [512, 512]
+  hf_id: "Angelou0516/kvasir-seg"
+  hf_image_key: image
+  hf_mask_key: mask
+  hf_splits:
+    train: train
+    val: validation
+    test: test
