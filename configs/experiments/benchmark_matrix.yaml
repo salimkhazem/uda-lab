@@ -1,0 +1,18 @@
+base_config: configs/experiments/main_full_method.yaml
+experiment: benchmark_matrix
+results_root: outputs/runs
+mode: both
+datasets:
+  - drive_hf
+  - stare_hf
+  - chase_hf
+  - kvasir
+  - deepglobe_roads
+  - ssdd
+  - gta5_cityscapes
+models:
+  - unet
+  - deeplabv3p
+  - segformer
+  - swin_unet
+seeds: [0]
