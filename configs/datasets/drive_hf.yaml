@@ -1,0 +1,13 @@
+dataset:
+  name: drive
+  num_classes: 2
+  ignore_index: 255
+  img_size: [512, 512]
+  crop_size: [512, 512]
+  hf_id: "Zomba/DRIVE-digital-retinal-images-for-vessel-extraction"
+  hf_image_key: image
+  hf_mask_key: label
+  hf_splits:
+    train: train
+    val: validation
+    test: test
