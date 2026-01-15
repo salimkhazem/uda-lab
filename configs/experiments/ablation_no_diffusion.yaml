@@ -1,0 +1,6 @@
+exp:
+  name: ablation_no_diffusion
+
+uda:
+  enabled: true
+  use_diffusion_aug: false
