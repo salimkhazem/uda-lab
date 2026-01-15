@@ -1,0 +1,15 @@
+base_config: configs/experiments/main_full_method.yaml
+experiment: ablation_seed0
+results_root: outputs/runs
+mode: adapt
+datasets:
+  - drive_hf
+  - stare_hf
+  - chase_hf
+  - kvasir
+models:
+  - unet
+  - deeplabv3p
+seeds: [0]
+overrides:
+  uda.use_diffusion_aug: true
