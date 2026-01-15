@@ -1,0 +1,6 @@
+model:
+  name: swin_unet
+  in_channels: 3
+  num_classes: 2
+  backbone: swin_tiny_patch4_window7_224
+  pretrained: true
