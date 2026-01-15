@@ -1,0 +1,6 @@
+exp:
+  name: ablation_vary_gen_amount
+
+uda:
+  enabled: true
+  use_diffusion_aug: true
