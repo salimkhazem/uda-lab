@@ -1,0 +1,6 @@
+model:
+  name: deeplabv3p
+  in_channels: 3
+  num_classes: 2
+  pretrained: true
+  backbone: resnet50
