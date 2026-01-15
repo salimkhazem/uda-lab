@@ -1,0 +1,6 @@
+exp:
+  name: ablation_no_adv
+
+uda:
+  enabled: true
+  use_adv: false
