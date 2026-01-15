@@ -1,0 +1,86 @@
+exp:
+  name: default
+  output_dir: outputs/runs
+  log_wandb: false
+  log_tb: true
+  wandb_project: uda_lab
+  wandb_entity: ""
+
+seed: 0
+deterministic: true
+
+model:
+  name: unet
+  in_channels: 3
+  num_classes: 2
+  pretrained: true
+  backbone: resnet50
+
+dataset:
+  name: drive
+  root: data/drive
+  target_name: ""
+  target_root: ""
+  num_classes: 2
+  ignore_index: 255
+  img_size: [512, 512]
+  crop_size: [512, 512]
+  train_split: train
+  val_split: val
+  test_split: test
+  max_samples: null
+  target_max_samples: null
+
+train:
+  epochs: 50
+  batch_size: 4
+  lr: 0.001
+  weight_decay: 0.0001
+  num_workers: 4
+  amp: true
+  grad_accum: 1
+  eval_interval: 1
+  save_interval: 1
+  resume: ""
+  scheduler: poly
+  warmup_epochs: 0
+
+uda:
+  enabled: false
+  pseudo_threshold: 0.9
+  use_pseudo_filter: true
+  use_topo_loss: true
+  topo_weight: 0.1
+  use_diffusion_aug: false
+  diffusion_manifest: ""
+  diffusion_ratio: 1.0
+  use_adv: false
+  adv_weight: 0.001
+  consistency_weight: 0.1
+  topology_iters: 10
+  pseudo_morph: true
+  pseudo_min_size: 100
+  pseudo_skeleton_filter: false
+  strong_aug: true
+
+loss:
+  ce_weight: 1.0
+  dice_weight: 1.0
+
+diffusion:
+  model_path: "runwayml/stable-diffusion-v1-5"
+  prompt: ""
+  ref_images: ""
+  strength: 0.4
+  guidance_scale: 7.5
+  num_steps: 30
+  seed: 0
+
+logging:
+  log_wandb: false
+  log_tb: true
+  log_dir: logs
+
+runtime:
+  device: cuda
+  num_workers: 4
