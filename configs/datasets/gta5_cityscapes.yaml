@@ -1,0 +1,9 @@
+dataset:
+  name: gta5
+  root: ../data/gta5
+  target_name: cityscapes
+  target_root: ../data/cityscapes
+  num_classes: 19
+  ignore_index: 255
+  img_size: [1024, 512]
+  crop_size: [1024, 512]
