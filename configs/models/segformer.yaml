@@ -1,0 +1,6 @@
+model:
+  name: segformer
+  in_channels: 3
+  num_classes: 2
+  backbone: mit_b0
+  pretrained: true
